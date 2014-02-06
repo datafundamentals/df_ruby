@@ -9,9 +9,10 @@
 
 
 # install the ruby code
-
 package "ruby" do 
-	action [:install, :upgrade]
+	action :install
 end
 
-
+# extra recipes involved that we might need
+# these should be written as separate recipe and worked in as include_recipe
+include_recipe "df_ruby::rubygems"
