@@ -1,5 +1,6 @@
 ---
 driver:
+  synced_folders: [["/Users/thisguy/work/binaries", "/vagrant/binaries"]]
   name: vagrant
 
 provisioner:
@@ -7,7 +8,7 @@ provisioner:
 
 platforms:
   - name: centos-6.4
-
+  - name: ubuntu-12.04
 suites:
   - name: default
     run_list:

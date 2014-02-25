@@ -6,7 +6,7 @@
 
 # where we move the source file from the shared folder into the shared directory
 execute "copy rubygems" do 
-	command "cp /vagrant/binaries/rubygems-2.1.11 /home/vagrant"
+	command "cp -r /vagrant/binaries/rubygems-2.1.11 /home/vagrant"
 	action :run 
 end
 
