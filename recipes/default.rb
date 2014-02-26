@@ -17,7 +17,7 @@ only_if do
 	current_content.index("RUBY_HOME").nil?
 end
 
-	user ""
+	user "root"
 	group "root"
 	mode "0777"
 
