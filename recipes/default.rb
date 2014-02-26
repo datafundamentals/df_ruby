@@ -17,9 +17,9 @@ only_if do
 	current_content.index("RUBY_HOME").nil?
 end
 
-	user "root"
+	user ""
 	group "root"
-	mode "0755"
+	mode "0777"
 
 	current_content = File.read("/etc/profile")
 	new_content = current_content + new_lines
