@@ -21,3 +21,5 @@ end
 	new_content = current_content + new_lines
 	content "#{new_content}"
 end
+
+include_recipe "df_ruby::rubygems"
