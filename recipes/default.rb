@@ -9,17 +9,11 @@
 
 
 # this will set up the path for the ruby used in the omnibus installer.
-file "/etc/profile" do 
-	new_lines = "RUBY_HOME=/opt/chef/embedded/bin\nPATH=$PATH:$RUBY_HOME\nexport RUBY_HOME"
-
-only_if do 
-	current_content = File.read("/etc/profile")
-	current_content.index("RUBY_HOME").nil?
+file "/etc/profile.d/ruby.sh" do 
+mode "0777" 
+content "RUBY_HOME=/opt/chef/embedded/bin\nPATH=$PATH:$RUBY_HOME\nexport RUBY_HOME"
+action :create
 end
 
-	current_content = File.read("/etc/profile")
-	new_content = current_content + new_lines
-	content "#{new_content}"
-end
 
 include_recipe "df_ruby::rubygems"
