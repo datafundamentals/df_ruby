@@ -11,6 +11,7 @@
 # this will set up the path for the ruby used in the omnibus installer.
 file "/etc/profile.d/ruby.sh" do 
 mode "0777" 
+owner "root"
 content "RUBY_HOME=/opt/chef/embedded/bin\nPATH=$PATH:$RUBY_HOME\nexport RUBY_HOME"
 action :create
 end
