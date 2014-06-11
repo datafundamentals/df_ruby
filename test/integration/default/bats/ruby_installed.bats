@@ -1,5 +1,4 @@
-@test "verifies ruby installation" {
-	run ruby -version
-	["status" -eq 1]
-	["output" -eq "ruby*"]
+@test "Check Ruby version is 1.9.3p0" {
+  ruby -v
+  ruby -v | grep 1.9.3p0
 }
