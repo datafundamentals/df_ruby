@@ -18,3 +18,5 @@ end
 
 
 include_recipe "df_ruby::rubygems"
+
+Chef::Log.info("skip dependency test. Not relevant to cookbooks functioning.")
